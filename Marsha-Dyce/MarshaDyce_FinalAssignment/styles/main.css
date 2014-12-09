@@ -1,0 +1,659 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+p {
+  font-family: 'ubuntu', sans-serif;
+  color: #9d9c9c;
+}
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'ubuntu', sans-serif;
+}
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 20px;
+}
+h6 {
+  font-family: 'ubuntu', sans-serif;
+  font-size: 60px;
+}
+a,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.green {
+  color: #289342;
+}
+.center {
+  text-align: center;
+}
+.fullcol {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+}
+.underline {
+  border-bottom: solid 2px #289342;
+}
+header nav {
+  margin-top: 30px;
+}
+header nav h1 {
+  display: inline;
+  float: left;
+  width: 14.166666666666666%;
+  margin: 0 1.25%;
+  font-family: 'ubuntu', sans-serif;
+  font-size: 22px;
+  color: #000000;
+  margin-bottom: 35px;
+  padding-left: 30px;
+}
+header nav ul {
+  display: inline;
+  float: left;
+  width: 80.83333333333333%;
+  margin: 0 1.25%;
+}
+header nav ul a {
+  color: #000000;
+  margin-right: 35px;
+  font-family: 'ubuntu', sans-serif;
+  font-size: 15px;
+}
+header nav ul li {
+  display: inline-block;
+  float: right;
+}
+header nav ul li:first-of-type {
+  margin-right: 13px;
+}
+header nav .fa-bars {
+  display: none;
+}
+.hero-picture {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+  width: 100%;
+  height: 490px;
+  margin: 0;
+  background-image: url('../images/main21.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-picture h2 {
+  margin: 0 auto;
+  margin-top: 236px;
+  text-align: center;
+  width: 370px;
+  height: 50px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 10px;
+}
+.hero-picture h3 {
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+  width: 470px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 10px;
+}
+.hero-picture i {
+  display: inline;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 5em;
+  color: rgba(51, 189, 85, 0.5);
+}
+.hero-picture .fa-chevron-right {
+  float: right;
+  margin: 0 auto;
+  position: relative;
+  top: -100px;
+  margin-right: 8%;
+}
+.hero-picture .fa-chevron-left {
+  float: left;
+  margin: 0 auto;
+  position: relative;
+  top: -100px;
+  margin-left: 8%;
+}
+#mid-banner {
+  clear: both;
+  width: 100%;
+  height: 100px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 57px;
+  background: #289342;
+}
+#mid-title {
+  padding-top: 35px;
+  text-align: center;
+  list-style-type: none;
+}
+#mid-title li {
+  font-size: 20px;
+  display: inline;
+  margin-right: 3px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Ubunti', sans-serif;
+}
+#mid-title li:last-child {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid #fff;
+}
+#uibrush {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+}
+#uibrush h2 {
+  color: #484848;
+  margin-top: 50px;
+}
+#uibrush .intro {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+}
+#uibrush .intro p {
+  font-size: 16px;
+  line-height: 25px;
+  margin: 35px 20px 0 20px;
+}
+#uibrush .features {
+  display: inline;
+  float: left;
+  width: 22.5%;
+  margin: 0 1.25%;
+  margin-top: 50px;
+}
+#uibrush .features i {
+  color: #289342;
+}
+#uibrush .features h4 {
+  margin-top: 20px;
+}
+#uibrush .features p {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 20px 24px 50px 24px;
+}
+#recent {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+  margin-bottom: 65px;
+}
+#recent h2 {
+  color: #484848;
+}
+#recent .second p {
+  display: inline;
+  float: left;
+  width: 64.16666666666667%;
+  margin: 0 1.25%;
+  margin-left: 17.916666666666664%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 25px;
+}
+#recent .projects {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+}
+#recent .projects li {
+  display: inline;
+  float: left;
+  width: 22.5%;
+  margin: 0 1.25%;
+  text-align: right;
+}
+#recent .projects li .shrink {
+  margin: 0 8px 0 8px;
+  border: solid 1px #d5d4d3;
+  background: #eeeeee;
+}
+#recent .projects li h5 {
+  font-size: 16px;
+  color: #289342;
+  margin: 5px 20px 5px 0;
+}
+#recent .projects li .line {
+  border-bottom: solid 1px #d5d4d3;
+  margin: 0 10px 0 10px;
+}
+#recent .projects li p {
+  font-size: 12px;
+  margin-top: 5px;
+  margin: 7px 20px 7px 0;
+  color: #605f5f;
+}
+#about .aboutMain,
+#portfolio .aboutMain {
+  background: url("../images/main1.jpg") no-repeat;
+  background-size: cover;
+}
+#about .aboutMain h6,
+#portfolio .aboutMain h6 {
+  color: #fff;
+  padding-top: 110px;
+  margin-bottom: 35px;
+}
+#about .aboutMain p,
+#portfolio .aboutMain p {
+  display: inline;
+  float: left;
+  width: 80.83333333333333%;
+  margin: 0 1.25%;
+  margin-left: 9.583333333333332%;
+  color: #fff;
+  margin-bottom: 195px;
+}
+#about h2,
+#portfolio h2 {
+  color: #484848;
+  margin-top: 40px;
+}
+#about p,
+#portfolio p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+#about .margin,
+#portfolio .margin {
+  padding: 0 30px 0 30px;
+}
+#team {
+  background-color: #f6f6f6;
+  border-top: solid 1px #d5d4d3;
+  border-bottom: solid 1px #d5d4d3;
+}
+#team h2 {
+  color: #484848;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+#team .team li {
+  display: inline;
+  float: left;
+  width: 22.5%;
+  margin: 0 1.25%;
+}
+#team .team li h5 {
+  color: #484848;
+  margin-top: 10px;
+}
+#team .team li .title {
+  font-size: 16px;
+  margin-top: 10px;
+}
+#team .team li .info {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+#mission article {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+}
+#mission h2 {
+  color: #484848;
+  margin-top: 35px;
+}
+#mission p {
+  margin-top: 20px;
+}
+#mission .left {
+  display: inline;
+  float: left;
+  width: 47.5%;
+  margin: 0 1.25%;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 85px;
+}
+#mission .right {
+  display: inline;
+  float: left;
+  width: 47.5%;
+  margin: 0 1.25%;
+  margin-top: 40px;
+}
+#portfolio .aboutMain {
+  background: url("../images/main2.jpg") no-repeat;
+  background-size: cover;
+}
+#works .fa-bars {
+  display: none;
+}
+#works .selection {
+  display: inline;
+  float: left;
+  width: 97.5%;
+  margin: 0 1.25%;
+}
+#works .selection li {
+  display: inline-block;
+  padding: 8px 10px 4px 10px;
+  font-size: 14px;
+  font-family: 'ubuntu';
+  color: #9d9c9c;
+  margin-right: 15px;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#works .selection li.active {
+  border: solid 1px #cac6c6;
+  background: rgba(51, 189, 85, 0.5);
+  border-radius: 3px;
+}
+#works .slides li {
+  display: inline;
+  float: left;
+  width: 22.5%;
+  margin: 0 1.25%;
+  margin-top: 40px;
+  position: relative;
+}
+#works .slides li:last-of-type {
+  margin-bottom: 90px;
+}
+#works .slides .portinfo {
+  position: absolute;
+  background: rgba(51, 189, 85, 0.5);
+  width: 100%;
+  height: 99%;
+  opacity: 0;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  -moz-transition: 300ms all ease;
+  -o-transition: 300ms all ease;
+}
+#works .slides .portinfo img {
+  width: 36px;
+  margin-left: 45%;
+  margin-top: 30%;
+}
+#works .slides .portinfo h5 {
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+#works .slides .portinfo:hover {
+  opacity: 1;
+  -webkit-transition: 600ms all ease;
+  transition: 600ms all ease;
+  -moz-transition: 600ms all ease;
+  -o-transition: 600ms all ease;
+}
+footer {
+  background-color: #289342;
+  clear: both;
+  height: 55px;
+}
+footer p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  padding-top: 22px;
+}
+@media (max-width: 960px) {
+  h2 {
+    font-size: 22px;
+  }
+  #mission .right {
+    margin-top: 100px;
+  }
+  #works .slides .portinfo h5 {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  header .dropdown {
+    display: none;
+  }
+  header .dropdown.open {
+    display: block;
+  }
+  header nav ul {
+    margin-top: 30px;
+  }
+  header nav .nav li {
+    display: block;
+    float: none;
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 25px;
+  }
+  header nav .nav li:first-of-type {
+    margin-right: 50px;
+  }
+  header nav .nav li a {
+    font-size: 16px;
+  }
+  header nav .fa-bars {
+    display: block;
+    margin-right: 90px;
+    float: right;
+    color: #289342;
+  }
+  #uibrush .features {
+    display: inline;
+    float: left;
+    width: 47.5%;
+    margin: 0 1.25%;
+    margin-top: 30px;
+  }
+  #uibrush .features p {
+    margin-bottom: 30px;
+    font-size: 13px;
+  }
+  #recent .second p {
+    display: inline;
+    float: left;
+    width: 97.5%;
+    margin: 0 1.25%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  #recent .projects li {
+    display: inline;
+    float: left;
+    width: 47.5%;
+    margin: 0 1.25%;
+    margin-bottom: 25px;
+  }
+  #team .team li {
+    display: inline;
+    float: left;
+    width: 47.5%;
+    margin: 0 1.25%;
+  }
+  #mission .left {
+    display: inline;
+    float: left;
+    width: 97.5%;
+    margin: 0 1.25%;
+    margin-bottom: 0;
+  }
+  #mission .right {
+    display: inline;
+    float: left;
+    width: 64.16666666666667%;
+    margin: 0 1.25%;
+    margin-left: 17.916666666666664%;
+    margin-top: 30px;
+    margin-bottom: 65px;
+  }
+  #works .selection {
+    display: inline;
+    float: left;
+    width: 97.5%;
+    margin: 0 1.25%;
+  }
+  #works .selection li {
+    margin-right: 10px;
+  }
+  #works .slides {
+    padding: 0 5px 0 5px;
+  }
+  #works .slides li {
+    display: inline;
+    float: left;
+    width: 47.5%;
+    margin: 0 1.25%;
+    margin-top: 30px;
+  }
+  #works .slides .portinfo h5 {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 640px) {
+  #uibrush .intro p,
+  #recent .second p,
+  #about p,
+  #portfolio p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  h6 {
+    font-size: 42px;
+  }
+  #about .aboutMain h6,
+  #portfolio .aboutMain h6 {
+    padding-top: 80px;
+  }
+  #portfolio .aboutMain p,
+  #about .aboutMain p {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 480px) {
+  header nav .nav li {
+    margin-right: 20px;
+  }
+  header nav .nav li:first-of-type {
+    margin-right: 20px;
+  }
+  header nav .fa-bars {
+    margin-right: 60px;
+  }
+  .hero-picture .fa-chevron-right {
+    display: none;
+  }
+  .hero-picture .fa-chevron-left {
+    display: none;
+  }
+  #uibrush .features {
+    display: inline;
+    float: left;
+    width: 97.5%;
+    margin: 0 1.25%;
+    margin-top: 30px;
+  }
+  #uibrush .features p {
+    margin-bottom: 0;
+  }
+  #recent {
+    margin-top: 45px;
+  }
+  #recent .projects li {
+    display: inline;
+    float: left;
+    width: 80.83333333333333%;
+    margin: 0 1.25%;
+    margin-left: 9.583333333333332%;
+    margin-bottom: 25px;
+  }
+  #team .team li {
+    display: inline;
+    float: left;
+    width: 64.16666666666667%;
+    margin: 0 1.25%;
+    margin-left: 17.916666666666664%;
+  }
+  #mission .right {
+    display: inline;
+    float: left;
+    width: 97.5%;
+    margin: 0 1.25%;
+    margin-top: 30px;
+    margin-bottom: 65px;
+  }
+  #works .fa-bars {
+    display: block;
+    color: #289342;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #works .selection {
+    display: none;
+  }
+  #works .selection.open {
+    display: block;
+    margin-top: 20px;
+  }
+  #works .selection li {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-right: 0;
+  }
+  #works .slides li {
+    margin-top: 20px;
+  }
+  #works .slides li .portinfo h5 {
+    margin-top: 10px;
+  }
+}

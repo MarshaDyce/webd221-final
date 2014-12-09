@@ -1,0 +1,795 @@
+// VARIABLES & MIXINS
+//------------------------------------
+
+@mainColor: #289342;
+@navColor: #000;
+@hColor: #484848;
+@white: #fff;
+
+.fontSet(@size, @size2) {
+    font-size: (@size);
+    line-height: (@size2);
+}
+
+.transition(@time) {
+    -webkit-transition: @time all ease;
+    transition: @time all ease;
+    -moz-transition: @time all ease;
+    -o-transition: @time all ease;
+}
+
+@column-width: 70;
+@gutter-width: 30;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+@total-width: 100%;  //makes .column mixin turn into %
+
+.column(@x,@columns:@columns) {
+    display: inline;
+    float: left;
+    width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+    margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.push(@offset:1) {
+    margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.pull(@offset:1) {
+    margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+// Fixes Box Model sizing issues
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//Use this to force clear floated child elements
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+//Shared styles
+p {
+    font-family: 'ubuntu',sans-serif;
+    color: #9d9c9c;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'ubuntu',sans-serif;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h6 {
+    font-family: 'ubuntu',sans-serif;
+    font-size: 60px;
+}
+
+a, 
+a:active, 
+a:visited, 
+a:hover {
+    text-decoration: none;
+}
+
+img {                       
+    width: 100%;
+}
+
+.container {                
+    max-width: @gridsystem-width;
+    margin: 0 auto;
+}
+
+.green {
+    color: @mainColor;
+}
+
+.center {
+    text-align: center;
+}
+
+.fullcol {
+    .column(12);
+}
+
+.underline {
+    border-bottom: solid 2px @mainColor;
+}
+
+header {
+
+    nav {
+        margin-top: 30px;
+
+        h1 {
+            .column(2);
+            font-family: 'ubuntu',sans-serif ;
+            font-size: 22px;
+            color: @navColor;
+            margin-bottom: 35px;
+            padding-left: 30px;
+        }
+
+        ul {
+            .column(10);
+            
+            a {
+                color: @navColor;
+                margin-right: 35px;
+                font-family: 'ubuntu',sans-serif ;
+                font-size: 15px;
+            }
+
+            li {
+                display: inline-block;
+                float: right;
+
+                &:first-of-type {
+                    margin-right: 13px;
+                }
+            }
+        }
+
+        .fa-bars {
+            display: none;
+        }
+    }
+}
+
+.hero-picture{
+    .column(12);
+    width: 100%;
+    height: 490px;
+    margin: 0;
+    background-image: url('../images/main21.jpg');
+    background-size: cover;  
+    background-repeat: no-repeat;
+
+    h2{ 
+        margin: 0 auto;
+        margin-top: 236px; 
+        text-align: center;
+        width: 370px;
+        height: 50px;
+        font-size: 26px;
+        font-weight: 500; 
+        color: @white;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 10px;      
+    }
+
+    h3{
+        margin: 0 auto;
+        margin-top: 15px; 
+        text-align: center;
+        width: 470px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: 500;
+        color: @white;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 10px;
+    }
+
+    i{
+        display: inline;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 5em;
+        color:rgba(51, 189, 85, 0.5)
+    }
+
+    .fa-chevron-right{
+        float: right;
+        margin: 0 auto;
+        position: relative;
+        top: -100px;
+        margin-right:8%; 
+    }
+
+    .fa-chevron-left{
+        float: left;
+        margin: 0 auto;
+        position: relative;
+        top: -100px;
+        margin-left:8%; 
+    }
+
+}
+
+#mid-banner {
+  clear: both;
+  width: 100%;
+  height: 100px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 57px;
+  background: #289342;
+}
+
+#mid-title {
+  padding-top: 35px;
+  text-align: center;
+  list-style-type: none;
+}
+#mid-title li {
+  font-size: 20px;
+  display: inline;
+  margin-right: 3px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Ubunti',sans-serif ;
+}
+#mid-title li:last-child {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid #fff;
+}
+#uibrush {
+    .column(12);
+
+    h2 {
+        color: @hColor;
+        margin-top: 50px;
+    }
+
+    .intro {
+        .column(12);
+
+        p {
+            .fontSet(16px, 25px);
+            margin: 35px 20px 0 20px;
+        }
+    }
+
+    .features {
+        .column(3);
+        margin-top: 50px;
+
+        i {
+            color: @mainColor;
+        }
+
+        h4 {
+            margin-top: 20px;
+        }
+
+        p {
+            .fontSet(12px, 18px);
+            margin: 20px 24px 50px 24px;
+        }
+    }
+}
+
+#recent {
+    .column(12);
+    margin-bottom: 65px;
+
+    h2 {
+        color: @hColor;
+    }
+
+    .second p {
+        .column(8);
+        .push(2);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .fontSet(16px, 25px);
+    }
+
+    .projects {
+        .column(12);
+
+        li {
+            .column(3);
+                text-align: right;
+
+            .shrink {
+                margin: 0 8px 0 8px;
+                border: solid 1px #d5d4d3;
+                background: #eeeeee;
+            }
+
+            h5 {    
+                font-size: 16px;
+                color: @mainColor;
+                margin: 5px 20px 5px 0;
+            }
+
+            .line {
+                border-bottom: solid 1px #d5d4d3;
+                margin: 0 10px 0 10px;
+            }
+
+            p {
+                font-size: 12px;
+                margin-top: 5px;
+                margin: 7px 20px 7px 0;
+                color: #605f5f;
+            }
+        }
+    }
+}
+
+#about,
+#portfolio {
+
+    .aboutMain {
+        background: url("../images/main1.jpg")no-repeat;
+        background-size: cover;
+
+        h6 {
+            color: #fff;
+            padding-top: 110px;
+            margin-bottom: 35px;
+        }
+
+        p {
+            .column(10);
+            .push(1);
+            color: #fff;
+            margin-bottom: 195px;
+        }
+    }
+
+    h2 {
+        color: @hColor;
+        margin-top: 40px;
+    }
+
+    p {
+        .fontSet(16px, 25px);
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+
+    .margin {
+        padding: 0 30px 0 30px;
+    }
+}
+
+#team {
+    background-color: #f6f6f6;
+    border-top: solid 1px #d5d4d3;
+    border-bottom: solid 1px #d5d4d3;
+
+    h2 {
+        color: @hColor;
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
+
+    .team {
+
+        li {
+            .column(3);
+
+            h5 {
+                color: @hColor;
+                margin-top: 10px;
+            }
+
+            .title {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+
+            .info {
+                .fontSet(14px, 20px);
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+#mission {
+
+    article {
+        .column(12);
+    }
+
+    h2 {
+        color: @hColor;
+        margin-top: 35px;
+    }
+
+    p {
+        margin-top: 20px;
+    }
+
+    .left {
+        .column(6);
+        .fontSet(14px, 18px);
+        margin-bottom: 85px;
+    }
+
+    .right {
+        .column(6);
+        margin-top: 40px;
+    }
+}
+
+#portfolio {
+
+    .aboutMain {
+        background: url("../images/main2.jpg")no-repeat;
+        background-size: cover;
+    }
+}
+
+#works {
+
+    .fa-bars {
+        display: none;
+    }
+
+    .selection {
+        .column(12);
+        li {
+            display: inline-block;
+            padding: 8px 10px 4px 10px;
+            font-size: 14px;
+            font-family: 'ubuntu';
+            color: #9d9c9c;
+            margin-right: 15px;
+            border: solid 1px transparent;
+            border-radius: 3px;
+            cursor: pointer;    
+
+            &.active {
+                border: solid 1px #cac6c6;
+                background: rgba(51, 189, 85, 0.5);
+                
+                border-radius: 3px;
+            }   
+        }               
+    }
+
+    .slides {
+
+        li {
+            .column(3);
+            margin-top: 40px;
+            position: relative;
+
+            &:last-of-type {
+                margin-bottom: 90px;
+            }
+        }
+
+        .portinfo {
+            position: absolute;
+            background: rgba(51, 189, 85, 0.5);
+            width: 100%;
+            height: 99%;
+            opacity: 0;
+            .transition(300ms);
+
+            img {
+                width: 36px;
+                margin-left: 45%;
+                margin-top: 30%;
+            }
+
+            h5 {
+                color: #fff;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            &:hover {
+                opacity: 1;
+                .transition(600ms);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: @mainColor;
+    clear: both;
+    height: 55px;
+
+    p {
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        padding-top: 22px;
+    }
+}
+
+
+//----------------------------
+// @MEDIA QUERIES 
+//----------------------------
+@media (max-width: 960px) {
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #mission {
+
+        .right {
+            margin-top: 100px;
+        }
+    }
+
+    #works .slides .portinfo {
+                
+        h5 {
+            margin-top: 10px;
+        }   
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+
+        .dropdown {
+            display: none;
+
+            &.open {
+                display: block;
+            }
+        }
+
+        nav {
+
+            ul {
+                margin-top: 30px;
+            }
+            
+            .nav li {
+                display: block;
+                float: none;
+                text-align: right;
+                margin-right: 50px;
+                margin-bottom: 25px;
+
+                &:first-of-type {
+                    margin-right: 50px;
+                }
+
+                a {
+                    font-size: 16px;
+                }
+            }
+
+            .fa-bars {
+                display: block;
+                margin-right: 90px;
+                float: right;
+                color: @mainColor;
+            }
+        }
+    }
+
+    #uibrush {
+        
+        .features {
+            .column(6);
+            margin-top: 30px;
+
+            p {
+                margin-bottom: 30px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    #recent {
+
+        .second p {
+            .column(12);
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .projects {
+
+            li {
+                .column(6);
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    #team .team li {
+        .column(6);
+    }
+
+    #mission {
+
+        .left {
+            .column(12);
+            margin-bottom: 0;
+        }
+
+        .right {
+            .column(8);
+            .push(2);
+            margin-top: 30px;
+            margin-bottom: 65px;
+        }
+    }
+
+    #works {
+
+    .selection {
+        .column(12);
+        li {
+            margin-right: 10px;
+        }               
+    }
+
+    .slides {
+        padding: 0 5px 0 5px;
+
+        li {
+            .column(6);
+            margin-top: 30px;
+        }
+
+            .portinfo h5 {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    #uibrush .intro p,
+    #recent .second p,
+    #about p,
+    #portfolio p {
+        .fontSet(14px, 20px);
+    }
+
+    h6 {
+        font-size: 42px;
+    }
+
+    #about .aboutMain h6,
+    #portfolio .aboutMain h6 {
+        padding-top: 80px;
+    }
+
+    #portfolio .aboutMain p,
+    #about .aboutMain p {
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    header {
+
+
+        nav {
+
+            .nav li {
+                margin-right: 20px;
+
+                &:first-of-type {
+                    margin-right: 20px;
+                }
+            }
+
+            .fa-bars {
+                margin-right: 60px;
+            }
+        }
+    }
+    
+    .hero-picture{
+        .fa-chevron-right{
+            display: none;
+        }
+        .fa-chevron-left{
+            display: none;
+        }
+    }
+
+    #uibrush {
+        
+        .features {
+            .column(12);
+            margin-top: 30px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    #recent {
+        margin-top: 45px;
+
+        .projects li {
+            .column(10);
+            .push(1);
+            margin-bottom: 25px;
+        }
+    }
+
+    #team .team li {
+        .column(8);
+        .push(2);
+    }
+
+    #mission {
+
+        .right {
+            .column(12);
+            margin-top: 30px;
+            margin-bottom: 65px;
+        }
+    }
+
+    #works {
+
+        .fa-bars {
+            display: block;;
+            color: @mainColor;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .selection {
+            display: none;
+
+            &.open {
+                display: block;
+                margin-top: 20px;
+            }
+
+            li {
+                display: block;
+                margin-bottom: 10px;
+                text-align: center;
+                margin-right: 0;
+            }   
+        }
+
+        .slides li {
+            margin-top: 20px;
+
+            .portinfo h5 {
+                margin-top: 10px;   
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
